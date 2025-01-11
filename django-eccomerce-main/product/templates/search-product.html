@@ -1,0 +1,39 @@
+
+
+
+
+<div class="container">
+    <form class="header-form" method="get" >
+        {{myfilter.form}}
+
+        <input type="submit" value="Search" name=" " >
+        <button><i class="fas fa-search"></i></button>
+
+    </form>
+
+    <form method="get">
+    
+    {% for item in myfilter.queryset  %}
+        <table>
+            <tr>
+                <td>{{item.name}} /</td>
+                <td>{{item.brand}} /</td>
+                <td>{{item.price}}</td>
+            </tr>
+        </table>
+    {% endfor %}
+            
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
